@@ -4,6 +4,8 @@
 #include <string>
 #include <fstream>
 using namespace std;
+//Proekt napredno programiranje Boris Dimoski INKI887
+//Zadaca 50:Promena na ASCII karakteri na daden string so najgolemata brojka vo indeksot, smestuvanje vo vektor, sortiranje i smestuvanje na sodrzina vo izlezna datoteka
 //funkcija za najgolema cifra
 int najg(int a)
 {
@@ -32,26 +34,28 @@ int main()
     cout<<"Najgolema cifra: "<<n<<endl;
     cout<<"----------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<str;
-    cout<<endl;
     for(i=0;i<str.size();i++)       //promena na ASCII vrednost i vnesuvanje vo vektorot
     {
-        str[i]+=n;
+        str[i]=(int)str[i]+n;
         v.push_back(str[i]);
     }
+    cout<<endl;
     cout<<"----------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"Stringot so smeneti ASCII karakteri:"<<endl;
     cout<<str;
-    sort(v.begin(),v.end());        //algoritam za sortiranje na vektorot
-    cout<<endl;
+    sort(v.begin(),v.end());
+    cout<<endl;  //algoritam za sortiranje na vektorot
     cout<<"----------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"Sortiran vektor:"<<endl;
-    cout<<endl;
+
     dat.open("INKI887.proekt3.txt", ios::out | std::ofstream::trunc); //otvaranje na datoteka INKI887.proekt3.txt, brisenje na prethodna sodrzina
     for(i=0;i<v.size();i++)                                           //i vnesuvanje na nova
     {
         cout<<(char)v[i];
         dat<<(char)v[i];
     }
+    cout<<endl;
+    cout<<"----------------------------------------------------------------------------------------------------------------------"<<endl;
     dat.close();
     return 0;
 }
