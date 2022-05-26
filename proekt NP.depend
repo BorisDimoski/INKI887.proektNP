@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1653559621 source:c:\users\m\desktop\proekt np\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<string>
+	<fstream>
+
+1653566229 source:c:\users\m\desktop\kodovi\proekt np\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<string>
+	<fstream>
+
